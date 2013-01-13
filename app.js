@@ -1,7 +1,6 @@
 require('nodefly').profile(
     'ec50d897-6443-4f5a-b96b-ab0cb99b3ed9',
-    ['zurichtechtalks','Heroku'],
-);
+    ['zurichtechtalks','Heroku']);
 
 var express = require('express');
 
