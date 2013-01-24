@@ -1,5 +1,11 @@
-zurichtechtalks-site
-====================
+# zurichtechtalks
+
+## Tests
+
+    $ foreman start (in terminal window 1)
+    $ npm test (in terminal window 2)
+
+
 ## License (MIT)
 
 Copyright (C) 2012 Boris Hofer & Philipp Küng
