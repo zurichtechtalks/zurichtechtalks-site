@@ -3,6 +3,9 @@
   "name": "zurichtechtalks-site",
   "version": "0.0.0",
   "homepage": "http://zurichtechtalks.ch",
+  "licenses": [{
+    "type": "MIT"
+  }],
   "repository": {
     "type": "git",
     "url": "git://github.com/zurichtechtalks/zurichtechtalks-site.git"
