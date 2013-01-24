@@ -6,6 +6,8 @@
 2. Install [MongoDB](http://www.mongodb.org/)
 3. Install the [Heroku Toolbelt](https://toolbelt.heroku.com/)
 
+Then clone the project and load the dependencies.
+
     $ git clone git://github.com/zurichtechtalks/zurichtechtalks-site.git
     $ cd zurichtechtalks-site
     $ npm install
