@@ -1,5 +1,16 @@
 # zurichtechtalks
 
+## Setup
+
+1. Install [Node.js](http://nodejs.org/) preferrably version 0.6.17
+2. Install [MongoDB](http://www.mongodb.org/)
+3. Install the [Heroku Toolbelt](https://toolbelt.heroku.com/)
+
+    $ git clone git://github.com/zurichtechtalks/zurichtechtalks-site.git
+    $ cd zurichtechtalks-site
+    $ npm install
+    $ foreman start
+
 ## Tests
 
     $ foreman start (in terminal window 1)
