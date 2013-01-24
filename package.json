@@ -8,8 +8,7 @@
     "url": "git://github.com/zurichtechtalks/zurichtechtalks-site.git"
   },
   "dependencies": {
-    "express": "3.0.6",
-    "nodefly": "stable"
+    "express": "3.0.6"
   },
   "devDependencies": {},
   "optionalDependencies": {},
