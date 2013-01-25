@@ -11,7 +11,8 @@
     "url": "git://github.com/zurichtechtalks/zurichtechtalks-site.git"
   },
   "dependencies": {
-    "express": "3.0.6"
+    "express": "3.0.6",
+    "jade": "0.28.1"
   },
   "devDependencies": {
     "mocha": "1.8.1",
