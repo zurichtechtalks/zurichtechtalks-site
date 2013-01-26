@@ -3,15 +3,13 @@ var should = require('should'),
 
 var root_url = 'http://localhost:5000';
 
-describe('=> Website', function(){
-    describe('-> Make root request', function(){
-        it('should return statusCode 200', function(done){
-            request
-                .get(root_url)
-                .end(function(result){
-                    result.statusCode.should.equal(200);
-                    done();
-                });
-        });
+describe('Root Website', function(){
+    it('should return statusCode 200', function(done){
+        request
+            .get(root_url)
+            .end(function(result){
+                result.statusCode.should.equal(200);
+                done();
+            });
     });
 });
