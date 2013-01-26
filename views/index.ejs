@@ -1,0 +1,33 @@
+<% layout('layout.ejs') -%>
+
+<script type="text/x-handlebars" data-template-name="application">
+    <div class="row">
+        <div class="twelve columns">
+            <h1>{{#linkTo "index"}}<span>Zurich</span><span>Tech</span><span>Talks</span>{{/linkTo}}</h1>
+            <hr>
+            {{ outlet }}
+        </div>
+    </div>
+</script>
+
+<script type="text/x-handlebars" data-template-name="index">
+    <p>This is the index page</p>
+</script>
+
+<script type="text/x-handlebars" data-template-name="posts">
+    {{#linkTo "posts"}}<h2>Posts</h2>{{/linkTo}}
+    <ul>
+    {{#each post in controller}}
+        <li>{{#linkTo "post" post}}{{ post.title }}{{/linkTo}}</li>
+    {{/each}}
+    </ul>
+    <div>
+        {{ outlet }}
+    </div>
+</script>
+
+<script type="text/x-handlebars" data-template-name="post">
+    <h2>{{ title }}</h2>
+    <hr>
+    <div>{{{ description }}}</div>
+</script>

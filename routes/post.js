@@ -7,8 +7,9 @@ var getPosts = function(callback){
 
         var formattedPosts = _.map(posts, function(post){
             return {
+                id: post.id,
                 title: post.title,
-                content: post.body,
+                description: post.body,
                 tags: post.tags
             }
         });
@@ -24,7 +25,7 @@ var getPosts = function(callback){
 
 exports.index = function(req, res){
     getPosts(function(posts){
-        res.send(posts);
+        res.send({posts: posts});
     });
 };
 
