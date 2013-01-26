@@ -12,12 +12,14 @@
     },
     "dependencies": {
         "express": "3.0.6",
-        "jade": "0.28.1"
+        "jade": "0.28.1",
+        "underscore": "1.4.3"
     },
     "devDependencies": {
         "mocha": "1.8.1",
         "should": "1.2.1",
-        "superagent": "0.12.1"
+        "superagent": "0.12.1",
+        "ntumblr": "0.0.41"
     },
     "optionalDependencies": {},
     "engines": {
