@@ -12,8 +12,9 @@
     },
     "dependencies": {
         "express": "3.0.6",
-        "jade": "0.28.1",
-        "underscore": "1.4.3"
+        "ejs": "0.8.3",
+        "underscore": "1.4.3",
+        "ejs-locals": "1.0.2"
     },
     "devDependencies": {
         "mocha": "1.8.1",
