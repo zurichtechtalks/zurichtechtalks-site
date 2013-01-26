@@ -35,4 +35,46 @@ if (Modernizr.touch && !window.location.hash) {
     });
 }
 
+
+/*
+ * Ember Application
+ *
+ */
+
+var App = Ember.Application.create();
+
+// Router
+App.Router.map(function(){
+    this.resource('posts', function(){
+        this.resource('post', {path: ':post_id'});
+    });
+});
+
+App.PostsRoute = Ember.Route.extend({
+    model: function(){
+        return App.Post.find();
+    }
+});
+
+App.PostRoute = Ember.Route.extend({
+    model: function(params){
+        return App.Post.find(params.post_id);
+    }
+});
+
+// Controllers
+App.PostsController = Ember.ArrayController.extend();
+App.PostController = Ember.ObjectController.extend();
+
+// Models
+App.Store = DS.Store.extend({
+    revision: 11,
+    adapter: 'DS.RESTAdapter'
+});
+
+App.Post = DS.Model.extend({
+    title: DS.attr('string'),
+    description: DS.attr('string')
+});
+
 })(jQuery, this);
