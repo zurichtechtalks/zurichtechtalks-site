@@ -2,14 +2,14 @@ var fs = require('fs'),
     _ = require('underscore');
 
 var getPosts = function(callback){
-    fs.readFile('fixtures/posts.json', 'utf8', function(err, data){
+    fs.readFile('fixtures/new_posts.json', 'utf8', function(err, data){
         var posts = JSON.parse(data);
 
         var formattedPosts = _.map(posts, function(post){
             return {
                 id: post.id,
                 title: post.title,
-                description: post.body,
+                description: post.description,
                 tags: post.tags
             }
         });

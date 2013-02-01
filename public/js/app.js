@@ -80,7 +80,11 @@ App.Store = DS.Store.extend({
 
 App.Post = DS.Model.extend({
     title: DS.attr('string'),
-    description: DS.attr('string')
+    description: DS.attr('string'),
+    description_html: function(){
+        var converter = new Showdown.converter();
+        return converter.makeHtml(this.get('description'));
+    }.property('description')
 });
 
 })(jQuery, this);
