@@ -35,52 +35,32 @@ if (Modernizr.touch && !window.location.hash) {
     });
 }
 
+})(jQuery, this);
+
 
 /*
- * Ember Application
+ * Angular Application
  *
  */
 
-var App = Ember.Application.create();
-
-// Router
-App.Router.map(function(){
-    this.resource('posts', function(){
-        this.resource('post', {path: ':post_id'});
+angular.module('project', ['restapi']).
+    config(function($routeProvider) {
+        $routeProvider.
+            when('/', {controller: ListCtrl, templateUrl: 'list.html'}).
+            when('/:projectId', {controller: ShowCtrl, templateUrl: 'detail.html'}).
+            otherwise({redirectTo: '/'});
     });
-});
 
-App.IndexRoute = Ember.Route.extend({
-    redirect: function(){
-        this.transitionTo('posts');
-    }
-});
+function ListCtrl($scope, Project) {
+    $scope.projects = Project.query();
+}
 
-App.PostsRoute = Ember.Route.extend({
-    model: function(){
-        return App.Post.find();
-    }
-});
+function ShowCtrl($scope, $location, $routeParams, Project) {
+    var self = this;
 
-App.PostRoute = Ember.Route.extend({
-    model: function(params){
-        return App.Post.find(params.post_id);
-    }
-});
-
-// Controllers
-App.PostsController = Ember.ArrayController.extend();
-App.PostController = Ember.ObjectController.extend();
-
-// Models
-App.Store = DS.Store.extend({
-    revision: 11,
-    adapter: 'DS.RESTAdapter'
-});
-
-App.Post = DS.Model.extend({
-    title: DS.attr('string'),
-    description: DS.attr('string')
-});
-
-})(jQuery, this);
+    Project.get({id: $routeParams.projectId}, function(project) {
+        console.log(project.title);
+        self.original = project;
+        $scope.project = new Project(self.original);
+    });
+}

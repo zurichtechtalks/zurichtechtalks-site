@@ -25,7 +25,7 @@ var getPosts = function(callback){
 
 exports.index = function(req, res){
     getPosts(function(posts){
-        res.send({posts: posts});
+        res.send(posts);
     });
 };
 
