@@ -47,7 +47,7 @@ angular.module('project', ['restapi']).
     config(function($routeProvider) {
         $routeProvider.
             when('/', {controller: ListCtrl, templateUrl: 'list.html'}).
-            when('/:projectId', {controller: ShowCtrl, templateUrl: 'detail.html'}).
+            when('/:id', {controller: ShowCtrl, templateUrl: 'detail.html'}).
             otherwise({redirectTo: '/'});
     });
 
@@ -56,11 +56,7 @@ function ListCtrl($scope, Project) {
 }
 
 function ShowCtrl($scope, $location, $routeParams, Project) {
-    var self = this;
-
-    Project.get({id: $routeParams.projectId}, function(project) {
-        console.log(project.title);
-        self.original = project;
-        $scope.project = new Project(self.original);
+    Project.get({id: $routeParams.id}, function(project) {
+        $scope.project = project;
     });
 }
