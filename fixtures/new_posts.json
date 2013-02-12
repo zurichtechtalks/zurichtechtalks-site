@@ -1,0 +1,22 @@
+[{
+    "id": "1",
+    "title": "Cloud Foundry Bootcamp @zhgeeks",
+    "created_at": "1359013500",
+    "tags": ["alvaro videla", "old_sound", "cloudfoundry", "vmware", "zhgeeks", "zürich", "meetup", "bootcamp", "clojure", "node.js", "rabbitmq", "instagram", "paas", "cloud"],
+    "description": "[Alvaro Videla](http://twitter.com/old_sound) from [Cloud Foundry](http://cloudfoundry.org) gives an overview of what Cloud Foundry is and what it solves. Then shows some code for his super webscale Cloudstagram Project which he built using Node.js, Clojure and RabbitMQ.\r\n\r\nRecorded at a [@zhgeeks](https://twitter.com/zhgeeks) Meetup in Zürich, hosted by [Switch](http://www.switch.ch).\r\n\r\nThanks to Alvaro for letting me tape his talk.\r\n\r\n**Links:** [Cloudstagram on Cloudfoundry](http://cloudstagram.cloudfoundry.com) - [Slides](http://www.slideshare.net/old_sound/cloud-foundry-bootcamp-15287899)",
+    "player_embed_url": "http://www.youtube.com/embed/WvurETLow7k"
+}, {
+    "id": "2",
+    "title": "Big Data Use-Cases across industries @SwissBigData",
+    "created_at": "1358773860",
+    "tags": ["use-case", "bigdata", "usergroup", "switzerland", "zürich", "georg polzer", "teralytics", "swissbigdata", "meetup"],
+    "description": "[Georg Polzer](https://twitter.com/gpolzer) from [Teralytics](http://www.teralytics.ch) explains how different sectors and industries can leverage data, they might already collect or is easy for them to come by to help them answer almost any question they come up with.\r\n\r\nRecorded at the third SwissBigData Usergroup Meetup in Zürich.\r\n\r\nThanks to the [@SwissBigData](https://twitter.com/SwissBigData) organizers and Georg Polzer for letting me tape this talk.",
+    "player_embed_url": "http://www.youtube.com/embed/_It4V2Zgzt4"
+}, {
+    "id": "3",
+    "title": "Three.js @JSZurich",
+    "created_at": "1359013500",
+    "tags": ["streunerlein", "jszurich", "javascript", "three.js", "dominique", "sandoz", "3d", "library", "zürich"],
+    "description": "Right before Christmas [Dominique Sandoz](https://twitter.com/streunerlein) gave a talk about [three.js a JavaScript 3D library](https://github.com/mrdoob/three.js/) at the local [@JSZurich Meetup](https://twitter.com/JSZurich). In the talk he live codes an example and shows what's possible today in terms of animation and audio/video interoperability by just using a browser.\r\n\r\nRecorded at [@JSZurich](https://twitter.com/JSZurich) by [@Centralway](https://twitter.com/Centralway).\r\n\r\nThe code used during the talk is on github [streunerlein/jsz-threejs](https://github.com/streunerlein/jsz-threejs).",
+    "player_embed_url": "http://www.youtube.com/embed/tdk_os2l6zQ"
+}]
