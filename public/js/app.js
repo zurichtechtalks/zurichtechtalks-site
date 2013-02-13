@@ -58,5 +58,7 @@ function ListCtrl($scope, Project) {
 function ShowCtrl($scope, $location, $routeParams, Project) {
     Project.get({id: $routeParams.id}, function(project) {
         $scope.project = project;
+        var converter = new Showdown.converter();
+        $scope.htmlDescription = converter.makeHtml(project.description);
     });
 }
