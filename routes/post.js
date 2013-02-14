@@ -10,7 +10,8 @@ var getPosts = function(callback){
                 id: post.id,
                 title: post.title,
                 description: post.description,
-                tags: post.tags
+                tags: post.tags,
+                player_embed_url: post.player_embed_url
             }
         });
         
