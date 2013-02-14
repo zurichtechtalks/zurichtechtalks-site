@@ -25,7 +25,7 @@ var getPosts = function(callback){
 
 exports.index = function(req, res){
     getPosts(function(posts){
-        res.send({posts: posts});
+        res.send(posts);
     });
 };
 
@@ -35,6 +35,8 @@ exports.index = function(req, res){
 
 exports.show = function(req, res){
     getPosts(function(posts){
-        res.send(posts[req.params['id']]);
+       res.send(_.find(posts, function(post) {
+            return post.id === req.params['id'];
+        }));
     });
 };
