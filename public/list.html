@@ -1,4 +1,8 @@
 <h2>Posts</h2>
-<ul ng-repeat="project in projects">
-    <li><a href="#/{{project.id}}">{{project.title}}</a></li>
-</ul>
+<div class="row" ng-repeat="project in projects">
+    <div class="twelve columns">
+        <div class="panel">
+            <a href="#/{{project.id}}"><h5>{{ project.title }} →</h5></a>
+        </div>
+    </div>
+</div>
