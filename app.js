@@ -3,7 +3,18 @@ var express = require('express'),
     routes = require('./routes'),
     post = require('./routes/post'),
     http = require('http'),
-    path = require('path');
+    path = require('path'),
+    config = require('./config'),
+    neo4j = require('node-neo4j');
+
+var db = new neo4j(config.neo4j);
+
+db.cypherQuery("START user = node(1) MATCH user-[:RELATED_TO]->friends RETURN friends", function(err, result){
+    if(err) throw err;
+
+    console.log(result.data); // delivers an array of query results
+    console.log(result.columns); // delivers an array of names of objects getting returned
+});
 
 var app = express();
 
